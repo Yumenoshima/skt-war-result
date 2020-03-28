@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-__version__ = '1.0'
+__version__ = '1.0.1'
 
 here = path.abspath(path.dirname(__file__))
 
@@ -20,6 +20,7 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs if x.startsw
 setup(
     name='skt-war-result',
     version=__version__,
+    entry_points={"console_scripts": ["skt-war-result = skt-war-result.main:main"]},
     description='Lists war results for Japanese servers in Lineage Mobile game.',
     long_description=long_description,
     long_description_content_type='text/markdown',
